@@ -56,6 +56,4 @@ If you encounter issues:
 2. Check that the files are correctly placed in the versions directory
 3. Verify that you have selected the correct version in the launcher
 
-## Support
-
-For support, please visit our GitHub repository or Discord server.
+## HIIII the voidisopen @voidisopen in youtube was here
