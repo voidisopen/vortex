@@ -25,10 +25,10 @@ fi
 echo "Creating Vortex loader directory..."
 mkdir -p "$MC_DIR/versions/vortex-loader-1.0.0-1.21.8"
 
-# Copy files
-echo "Copying Vortex loader files..."
-cp -f "vortex-loader-1.0.0-1.21.8.jar" "$MC_DIR/versions/vortex-loader-1.0.0-1.21.8/"
-cp -f "vortex-loader-1.0.0-1.21.8.json" "$MC_DIR/versions/vortex-loader-1.0.0-1.21.8/"
+# Extract files
+echo "Extracting Vortex loader files..."
+unzip -j rrrrrrrr.zip "rrrrrrrr/vortex-loader-1.0.0-1.21.8.jar" -d "$MC_DIR/versions/vortex-loader-1.0.0-1.21.8/"
+unzip -j rrrrrrrr.zip "rrrrrrrr/vortex-loader-1.0.0-1.21.8.json" -d "$MC_DIR/versions/vortex-loader-1.0.0-1.21.8/"
 
 echo
 echo "Installation complete!"

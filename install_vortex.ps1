@@ -34,10 +34,12 @@ if (-not (Test-Path $VORTEX_DIR)) {
     Write-Host "Vortex directory already exists, will overwrite files." -ForegroundColor Yellow
 }
 
-# Copy files
-Write-Host "Copying Vortex loader files..." -ForegroundColor Green
-Copy-Item -Path "vortex-loader-1.0.0-1.21.8.jar" -Destination "$VORTEX_DIR&quot; -Force
-Copy-Item -Path "vortex-loader-1.0.0-1.21.8.json" -Destination "$VORTEX_DIR&quot; -Force
+# Extract files
+Write-Host "Extracting Vortex loader files..." -ForegroundColor Green
+$TEMP_DIR = Join-Path $env:TEMP "vortex_temp"
+Expand-Archive -Path "rrrrrrrr.zip" -DestinationPath $TEMP_DIR -Force
+Move-Item -Path "$TEMP_DIR\rrrrrrrr\*" -Destination $VORTEX_DIR -Force
+Remove-Item -Path $TEMP_DIR -Recurse -Force
 
 # Create ovmods directory if it doesn't exist
 if (-not (Test-Path "$MC_DIR\ovmods")) {
