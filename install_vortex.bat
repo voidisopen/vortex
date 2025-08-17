@@ -20,10 +20,9 @@ if not exist "%MC_DIR%\versions\vortex-loader-1.0.0-1.21.8" (
     echo Vortex directory already exists, will overwrite files.
 )
 
-REM Copy files
-echo Copying Vortex loader files...
-copy /Y "vortex-loader-1.0.0-1.21.8.jar" "%MC_DIR%\versions\vortex-loader-1.0.0-1.21.8&quot;
-copy /Y "vortex-loader-1.0.0-1.21.8.json" "%MC_DIR%\versions\vortex-loader-1.0.0-1.21.8&quot;
+REM Extract files
+echo Extracting Vortex loader files...
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& { Expand-Archive -Path 'rrrrrrrr.zip' -DestinationPath '%TEMP%\vortex_temp' -Force; Move-Item -Path '%TEMP%\vortex_temp\rrrrrrrr\*' -Destination '%MC_DIR%\versions\vortex-loader-1.0.0-1.21.8\'; Remove-Item -Path '%TEMP%\vortex_temp' -Recurse -Force }"
 
 echo.
 echo Installation complete!
